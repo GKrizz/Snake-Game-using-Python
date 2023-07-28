@@ -1,0 +1,21 @@
+import numpy as np
+secret_no=int(np.random.randint(1,10,1))
+def guess_number():
+  counter=1
+
+  while counter<=8:
+    user_number=int(input("Enter your number : "))
+    if user_number==secret_no:
+      print("YOU WON ")
+      break
+    elif user_number<secret_no:
+      print("Your number is LOW ")
+    elif user_number>secret_no:
+      print("Your number is HIGH ")
+    else:
+      print("TRY AGAIN !! ")
+
+    counter=counter+1
+
+    if counter==3:
+      print("Your CHANCE IS OVER")
